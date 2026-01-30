@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #0f1a1a;
+    color: #e0e0e0;
+    line-height: 1.7;
+}
+
+header {
+    background: rgba(0, 61, 51, 0.92);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 1.2rem 3rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    transition: background 0.4s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+nav h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.1rem;
+    letter-spacing: 1.5px;
+    color: #d4af37;
+}
+
+nav ul {
+    display: flex;
+    gap: 2.2rem;
+    list-style: none;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #d4af37;
+    transform: translateY(-2px);
+}
+
+.page-hero {
+    height: 10vh;
+    min-height: 700px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,61,51,0.45), rgba(0,0,0,0.65));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 2rem;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+.cta-btn {
+    background: #d4af37;
+    color: #0f1a1a;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-btn:hover {
+    background: #e6c04a;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(212,175,55,0.4);
+}
+
+section {
+    padding: 8rem 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(212,175,55,0.15);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin: 2.5rem auto;
+    transition: all 0.5s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(212,175,55,0.15);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 2.5rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea, select, button {
+    padding: 1.1rem;
+    border: 1px solid rgba(212,175,55,0.3);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    font-size: 1.05rem;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #d4af37;
+    box-shadow: 0 0 0 3px rgba(212,175,55,0.2);
+}
+
+button {
+    background: #d4af37;
+    color: #0f1a1a;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background: #003d33;
+    color: #ccc;
+    text-align: center;
+    padding: 3rem;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 3.2rem; }
+    nav ul { gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
+    section { padding: 5rem 1.5rem; }
+}
